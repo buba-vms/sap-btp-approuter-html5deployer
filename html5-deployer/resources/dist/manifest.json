@@ -1,0 +1,40 @@
+{
+  "version": "1.42.0",
+  "sap.app": {
+    "id": "movies",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "crossNavigation": {
+      "inbounds": {
+        "intent1": {
+          "signature": {
+            "parameters": {
+              "additionalParameters": "allowed"
+            },
+            "semanticObject": "moviesfront",
+            "action": "display",
+            "title": "movies"
+          }
+        }
+      }
+    }
+  },
+  "sap.cloud": {
+    "service": "countriesRouter"
+  },
+  "dataSources": {
+    "abap-source": {
+      "uri": "abap/sap/opu/odata/sap/ZUI_C_TRAVEL_M_TPJ/Passenger",
+      "type": "OData",
+      "settings": {
+        "odataVersion": "2.0"
+      }
+    }
+  }
+}

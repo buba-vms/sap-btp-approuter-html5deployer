@@ -1,0 +1,11 @@
+applications:
+  # Application Router
+  - name: movie-html5-deployer
+    buildpacks:
+      - nodejs_buildpack
+    memory: 1024MB
+    disk_quota: 1024MB
+    no-route: true
+    path: .
+    services:
+      - movie-html5-host
